@@ -1,0 +1,261 @@
+// общие стили
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 1400px;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+
+    &:hover, &:active{
+        color:darkolivegreen;
+    }
+}
+
+// стили хэдер
+
+.header{
+    &__ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        border-bottom: 2px solid grey;
+        align-items: center;
+        height: 80px;
+        margin: 0;
+    }
+
+    &__btn{
+        border: none;
+        background-color: unset;
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+        height: 0;
+        overflow: hidden;
+
+        img{
+            height: 0;
+        }
+    }
+
+    &__item{
+        font-weight: 700;
+        color: grey;
+        text-decoration: none;
+    }
+
+    &__home{
+        color: black;
+    }
+
+    &__div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__h1{
+        width: min-content;
+    }
+
+    &__text{
+        display: flex;
+        align-items: center;
+    }
+
+    &__lang{
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    &__span{
+        color: gray;
+    }
+
+    &__img{
+        margin: 80px 0 50px;
+    }
+}
+
+// стили мэйн
+
+section{
+    background-color: rgba(246, 246, 246, 1);
+    text-align: center;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 150px;
+
+    &__p{
+        margin: 50px 0 100px;
+    }
+
+    &__mangas{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img{
+        width: 130px;
+    }
+
+    &2{
+        background-color: unset;
+    }
+
+}
+
+.character{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+
+    &__img{
+        width: 100%;
+        margin: 80px 0 50px;
+    }
+}
+
+// футер
+
+.footer{
+    padding: 7% 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__message{
+        margin-top: 20px;
+        border-radius: 50px;
+        width: fit-content;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        padding: .8rem;
+
+        &:hover{
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    }
+
+    &__icons{
+        width: 400px;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon{
+        height: 50px;
+        width: 50px;
+        transition: .3s;
+
+        &:hover{
+            height: 55px;
+            width: 55px;
+        }
+    }
+
+    &__autor{
+        color: gray;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .wrapper{
+        font-size: 2rem;
+    }
+    
+    .header{
+        position: relative;
+
+        &__ul{
+            flex-direction: column;
+            height: 0;
+            overflow: hidden;
+            gap: 15px;
+            padding-bottom: 15px;
+            transition: .3s;
+            border: none;
+            padding: 0;
+
+
+            &--active{
+                height: 330px;
+                padding: 3%;
+            }
+        }
+
+        &__btn{
+            z-index: 5;
+            height: 80px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 2rem;
+
+            img{
+                height: 80px;
+            }
+        }
+
+        &__div{
+            flex-direction: column;
+            position: relative;
+            align-items: flex-start;
+        }
+
+        &__lang{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+    }
+
+    .section{
+        &__mangas{
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 5%;
+        }
+
+        &__img{
+            width: 40%;
+        }
+    }
+
+    .footer{
+        padding: 5%;
+    }
+}
