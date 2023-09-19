@@ -1,11 +1,14 @@
 // общие стили
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     box-sizing: border-box;
 }
 
 .wrapper{
-    width: 1400px;
+    max-width: 1400px;
+    width: 95%;
     margin: auto;
     font-family: sans-serif;
     font-size: 1.4rem;
@@ -87,6 +90,7 @@ a{
     }
 
     &__img{
+        width: 100%;
         margin: 80px 0 50px;
     }
 }
@@ -96,13 +100,13 @@ a{
 section{
     background-color: rgba(246, 246, 246, 1);
     text-align: center;
+    padding: 2rem;
 }
 
 .section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 150px;
 
     &__p{
         margin: 50px 0 100px;
@@ -110,12 +114,15 @@ section{
 
     &__mangas{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
 
     &__img{
-        width: 130px;
+        width: 120px;
+        height: 186px;
+        object-fit: cover;
     }
 
     &2{
@@ -127,7 +134,6 @@ section{
 .character{
     display: flex;
     flex-direction: column;
-    padding: 100px 0;
     align-items: center;
 
     &__img{
@@ -189,10 +195,10 @@ section{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
     .wrapper{
-        font-size: 2rem;
+        width: 98%;
     }
     
     .header{
@@ -245,13 +251,8 @@ section{
 
     .section{
         &__mangas{
-        flex-wrap: wrap;
-        gap: 40px;
+        gap: 2rem;
         padding: 5%;
-        }
-
-        &__img{
-            width: 40%;
         }
     }
 
